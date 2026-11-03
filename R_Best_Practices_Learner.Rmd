@@ -114,7 +114,7 @@ letters<- c("R", "C," "B")
 x <- 7 
 if(x > 10) {
   print("x > 10")
-else {
+# need another } here. else {
   print("x <= 10")
  }
 
@@ -174,7 +174,7 @@ library(tidyr)
 
 ```{r}
 #unite the track and artist columns in the billboard data set using " by " as the separator  
-
+billboard_edited <- unite(billboard, "Combined", "track", "artist", sep="by")
 ```
 
 
@@ -206,6 +206,14 @@ else {
 print(paste(num))
 }
 
+#solution
+num = as.integer(readline(prompt="Enter a number: "))
+if((num %% 2) == 0) {
+print(paste(num, "is Even"))
+} else {
+print(paste(num, "is Odd"))
+}
+
 ```
 
 
@@ -225,6 +233,13 @@ groceries<- data.frame(
   money.well.spent=c(1.5, 3.40, 3.59),
   StoreBoughtFrom=c("Safeway", "TraderJoes", "Walmart")
 )
+
+groceries<- data.frame(
+  Food=c("potatos", "cereal", "milk"),
+  Price=c(1.5, 3.40, 3.59),
+  Store=c("Safeway", "TraderJoes", "Walmart")
+)
+
 ```
 
 
